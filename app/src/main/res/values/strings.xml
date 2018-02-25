@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Comprehensive Final</string>
+    <string name="sign_in">Please Sign In.</string>
+    <string name="username">Username:</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="password">Password</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="confirm_password">Confirm Password:</string>
+    <string name="reenter_password">Re-Enter Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="submit">Submit</string>
+    <string name="check_registration">Not Registered?</string>
+    <string name="registration">Click to register</string>
+    <string name="registration_request">Please Register.</string>
+    <string name="response">What kind of dog would you like to see, {currentuser}?</string>
+    <string name="terrier"> Terrier</string>
+    <string name="spaniel">Spaniel</string>
+    <string name="retriever">Retriever</string>
+    <string name="poddle">Poddle</string>
+    <string name="logout">Logout</string>
 </resources>
