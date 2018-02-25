@@ -6,13 +6,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class BreedsActivity extends AppCompatActivity {
 
     private SharedPreferences sharedPreferences;
-    private Breed breed;
+    private DogBreed breed;
     private Retrofit retrofit;
 
     @Override
@@ -39,10 +44,10 @@ public class BreedsActivity extends AppCompatActivity {
 
     private void getPhoto(String breedName) {
         DogBreedsApi breedService = retrofit.create(DogBreedsApi.class);
-        Call<Breed> getBreedimg = breedService.getBreed(breedName);
-        getBreedimg.enqueue(new Callback<Breed>() {
+        Call<DogBreed> getBreedimg = breedService.getBreed(breedName);
+        getBreedimg.enqueue(new Callback<DogBreed>() {
             @Override
-            public void onResponse(Call<Breed> call, Response<Breed> response) {
+            public void onResponse(Call<DogBreed> call, Response<DogBreed> response) {
 
                 breed = response.body();
 
@@ -61,7 +66,7 @@ public class BreedsActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<Breed> call, Throwable t) {
+            public void onFailure(Call<DogBreed> call, Throwable t) {
                 t.printStackTrace();
             }
         });
